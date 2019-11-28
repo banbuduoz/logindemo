@@ -1,0 +1,26 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /logindemo
+#springmvc
+#视图解析
+spring:
+  mvc:
+    view:
+      prefix: "/WEB-INF/jsp/"
+      suffix: ".jsp"
+#数据库连接
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sso?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+# 缓存（开发时设置为false）
+  thymeleaf:
+    cache: false
+  devtools:
+    restart:
+      enabled: true
+mybatis:
+  type-aliases-package: com.company.mapper
+fileuploadpath: E:/upload/
